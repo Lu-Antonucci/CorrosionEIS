@@ -20,33 +20,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>380</y>
-      <width>127</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Tab 1</string>
-     </attribute>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Tab 2</string>
-     </attribute>
-    </widget>
-   </widget>
    <widget class="QSplitter" name="splitter_3">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>30</y>
-      <width>521</width>
-      <height>331</height>
+      <width>621</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="orientation">
@@ -58,7 +38,7 @@
      </property>
      <widget class="QTabWidget" name="tabWidget_fiteo">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_modelo">
        <attribute name="title">
@@ -104,35 +84,35 @@
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <widget class="QLabel" name="label_2_parametros">
+          <widget class="QLabel" name="label_parametros">
            <property name="text">
             <string>Parámetros</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_3">
+          <widget class="QLabel" name="label_fijar">
            <property name="text">
             <string>Fijar</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_4">
+          <widget class="QLabel" name="label_limiteinferior">
            <property name="text">
             <string>Límite Inferior</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_5">
+          <widget class="QLabel" name="label_limitesuperior">
            <property name="text">
             <string>Límite Superior</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="label_6">
+          <widget class="QLabel" name="label_ajuste">
            <property name="text">
             <string>Ajuste</string>
            </property>
@@ -141,12 +121,38 @@
         </layout>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_2_ajuste">
+      <widget class="QWidget" name="tab_ajuste">
        <attribute name="title">
         <string>Ajuste</string>
        </attribute>
+       <widget class="QLabel" name="label_metodoajuste">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Método de ajuste</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_ponderacion">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>10</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ponderación</string>
+        </property>
+       </widget>
       </widget>
-      <widget class="QWidget" name="tab_3_simulacion">
+      <widget class="QWidget" name="tab_simulacion">
        <attribute name="title">
         <string>Simulación</string>
        </attribute>
@@ -162,7 +168,7 @@
       <layout class="QVBoxLayout" name="verticalLayout_bode"/>
      </widget>
      <widget class="QWidget" name="verticalLayoutWidget_2">
-      <layout class="QVBoxLayout" name="verticalLayout_2_nyquist"/>
+      <layout class="QVBoxLayout" name="verticalLayout_nyquist"/>
      </widget>
     </widget>
    </widget>
@@ -218,16 +224,6 @@
   <action name="actionExit">
    <property name="text">
     <string>Salir</string>
-   </property>
-  </action>
-  <action name="actionMaximizar">
-   <property name="icon">
-    <iconset>
-     <normalon>../../../../../../Descargas/maximizar-la-opcion-de-tamano.svg</normalon>
-    </iconset>
-   </property>
-   <property name="text">
-    <string>Maximizar</string>
    </property>
   </action>
  </widget>
