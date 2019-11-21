@@ -20,115 +20,151 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QSplitter" name="splitter">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>380</y>
+      <width>127</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+   <widget class="QSplitter" name="splitter_3">
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>70</y>
-      <width>256</width>
-      <height>223</height>
+      <y>30</y>
+      <width>521</width>
+      <height>331</height>
      </rect>
     </property>
     <property name="orientation">
-     <enum>Qt::Vertical</enum>
+     <enum>Qt::Horizontal</enum>
     </property>
-    <widget class="QTabWidget" name="tabWidget_fiteo">
-     <property name="currentIndex">
-      <number>0</number>
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
      </property>
-     <widget class="QWidget" name="modelo">
-      <attribute name="title">
-       <string>Modelo</string>
-      </attribute>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>57</width>
-         <height>15</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>CDC:</string>
-       </property>
+     <widget class="QTabWidget" name="tabWidget_fiteo">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_modelo">
+       <attribute name="title">
+        <string>Modelo</string>
+       </attribute>
+       <widget class="QLabel" name="label_cdc">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>57</width>
+          <height>15</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>CDC:</string>
+        </property>
+       </widget>
+       <widget class="QPlainTextEdit" name="plainTextEdit_cdc">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>191</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>335</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="label_2_parametros">
+           <property name="text">
+            <string>Parámetros</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Fijar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>Límite Inferior</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Límite Superior</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>Ajuste</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
-      <widget class="QPlainTextEdit" name="plainTextEdit">
-       <property name="geometry">
-        <rect>
-         <x>60</x>
-         <y>10</y>
-         <width>191</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
-       <property name="horizontalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOff</enum>
-       </property>
+      <widget class="QWidget" name="tab_2_ajuste">
+       <attribute name="title">
+        <string>Ajuste</string>
+       </attribute>
       </widget>
-      <widget class="QWidget" name="">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>335</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Parámetros</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>Fijar</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="text">
-           <string>Límite Inferior</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_5">
-          <property name="text">
-           <string>Límite Superior</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_6">
-          <property name="text">
-           <string>Ajuste</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
+      <widget class="QWidget" name="tab_3_simulacion">
+       <attribute name="title">
+        <string>Simulación</string>
+       </attribute>
       </widget>
      </widget>
-     <widget class="QWidget" name="ajuste">
-      <attribute name="title">
-       <string>Ajuste</string>
-      </attribute>
+     <widget class="QTableWidget" name="tableWidget"/>
+    </widget>
+    <widget class="QSplitter" name="splitter_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QWidget" name="verticalLayoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout_bode"/>
      </widget>
-     <widget class="QWidget" name="simulacion">
-      <attribute name="title">
-       <string>Simulación</string>
-      </attribute>
+     <widget class="QWidget" name="verticalLayoutWidget_2">
+      <layout class="QVBoxLayout" name="verticalLayout_2_nyquist"/>
      </widget>
     </widget>
-    <widget class="QTableWidget" name="tableWidget"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
