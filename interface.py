@@ -12,7 +12,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setWindowModality(QtCore.Qt.NonModal)
-        MainWindow.resize(1024, 768)
+        MainWindow.resize(1126, 576)
         MainWindow.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -21,8 +21,9 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout.setObjectName("gridLayout")
         self.splitter_3 = QtWidgets.QSplitter(self.centralwidget)
-        self.splitter_3.setGeometry(QtCore.QRect(20, 20, 731, 401))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -139,9 +140,10 @@ class Ui_MainWindow(object):
         self.verticalLayout_nyquist.setSizeConstraint(QtWidgets.QLayout.SetMaximumSize)
         self.verticalLayout_nyquist.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_nyquist.setObjectName("verticalLayout_nyquist")
+        self.gridLayout.addWidget(self.splitter_3, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1024, 20))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1126, 20))
         self.menubar.setObjectName("menubar")
         self.menu_Archivo = QtWidgets.QMenu(self.menubar)
         self.menu_Archivo.setObjectName("menu_Archivo")
@@ -168,7 +170,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "CorrosionEIS - versión 0.1"))
         self.label_cdc.setText(_translate("MainWindow", "CDC:"))
         self.label_parametros.setText(_translate("MainWindow", "Parámetros"))
         self.label_fijar.setText(_translate("MainWindow", "Fijar"))
