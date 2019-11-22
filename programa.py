@@ -1,15 +1,16 @@
-from PyQt5 import QtWidgets, QtCore
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QAction, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QSpacerItem, QSizePolicy, QPushButton
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import QSize
+
 from interface import Ui_MainWindow
 from matplotlib.figure import Figure
 import numpy as np
+
 from matplotlib.backends.qt_compat import QtCore, QtWidgets, is_pyqt5
-if is_pyqt5():
-    from matplotlib.backends.backend_qt5agg import (
-        FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
-else:
-    from matplotlib.backends.backend_qt4agg import (
-        FigureCanvas, NavigationToolbar2QT as NavigationToolbar)
 
 
 class mywindow(QtWidgets.QMainWindow):
@@ -20,19 +21,40 @@ class mywindow(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
         # Genero grafica con Matplotlib
 
-        grafica_bode = FigureCanvas(Figure())
-        self.ui.verticalLayout_nyquist.addWidget(grafica_bode)
-        #self.addToolBar(NavigationToolbar(grafica_bode, self))
-        self._bode_ax = grafica_bode.figure.subplots()
+        seno = WidgetPlot(self)
+        PlotCanvas()
+        self.ui.verticalLayout_nyquist.addWidget(seno)
 
-        grafica_nyquist = FigureCanvas(Figure())
-        self.ui.verticalLayout_bode.addWidget(grafica_nyquist)
-        #self.addToolBar(NavigationToolbar(grafica_nyquist, self))
-        self._nyquist_ax = grafica_nyquist.figure.subplots()
+        coseno = WidgetPlot(self)
+        self.ui.verticalLayout_bode.addWidget(coseno)
 
-        t = np.linspace(0, 10, 501)
-        self._bode_ax.plot(t, np.tan(t), ".")
-        self._nyquist_ax.plot(t, np.sin(t), ".")
+
+class WidgetPlot(QWidget):
+    def __init__(self, *args, **kwargs):
+        QWidget.__init__(self, *args, **kwargs)
+        self.setLayout(QVBoxLayout())
+        self.canvas = PlotCanvas(self, width=10, height=8)
+        self.toolbar = NavigationToolbar(self.canvas, self)
+        self.layout().addWidget(self.toolbar)
+        self.layout().addWidget(self.canvas)
+
+
+class PlotCanvas(FigureCanvas):
+    def __init__(self, parent=None, width=10, height=8, dpi=100):
+        fig = Figure(figsize=(width, height), dpi=dpi)
+        FigureCanvas.__init__(self, fig)
+        self.setParent(parent)
+        FigureCanvas.setSizePolicy(
+            self, QSizePolicy.Expanding, QSizePolicy.Expanding)
+        FigureCanvas.updateGeometry(self)
+        self.plot()
+
+    def plot(self):
+        data = np.linspace(0, 10, 501)
+        ax = self.figure.add_subplot(111)
+        ax.plot(data, np.sin(data), ".")
+        ax.set_title('Función Seno')
+        self.draw()
 
 
 app = QtWidgets.QApplication([])

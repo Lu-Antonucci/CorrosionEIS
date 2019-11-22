@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>849</width>
-    <height>555</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -20,19 +20,37 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QSplitter" name="splitter_3">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>20</x>
+      <y>20</y>
       <width>731</width>
       <height>401</height>
      </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
     </property>
     <widget class="QSplitter" name="splitter">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
@@ -41,6 +59,12 @@
        <number>2</number>
       </property>
       <widget class="QWidget" name="tab_modelo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <attribute name="title">
         <string>Modelo</string>
        </attribute>
@@ -73,7 +97,7 @@
          <enum>Qt::ScrollBarAlwaysOff</enum>
         </property>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -83,6 +107,9 @@
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMaximumSize</enum>
+         </property>
          <item>
           <widget class="QLabel" name="label_parametros">
            <property name="text">
@@ -122,6 +149,12 @@
        </widget>
       </widget>
       <widget class="QWidget" name="tab_ajuste">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <attribute name="title">
         <string>Ajuste</string>
        </attribute>
@@ -218,6 +251,12 @@
        </widget>
       </widget>
       <widget class="QWidget" name="tab_simulacion">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
        <attribute name="title">
         <string>Simulación</string>
        </attribute>
@@ -226,14 +265,28 @@
      <widget class="QTableWidget" name="tableWidget"/>
     </widget>
     <widget class="QSplitter" name="splitter_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
      <property name="orientation">
       <enum>Qt::Vertical</enum>
      </property>
      <widget class="QWidget" name="verticalLayoutWidget">
-      <layout class="QVBoxLayout" name="verticalLayout_bode"/>
+      <layout class="QVBoxLayout" name="verticalLayout_bode">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+      </layout>
      </widget>
      <widget class="QWidget" name="verticalLayoutWidget_2">
-      <layout class="QVBoxLayout" name="verticalLayout_nyquist"/>
+      <layout class="QVBoxLayout" name="verticalLayout_nyquist">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetMaximumSize</enum>
+       </property>
+      </layout>
      </widget>
     </widget>
    </widget>
@@ -243,7 +296,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>849</width>
+     <width>1024</width>
      <height>20</height>
     </rect>
    </property>
