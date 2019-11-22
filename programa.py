@@ -22,7 +22,7 @@ class mywindow(QtWidgets.QMainWindow):
         # Genero grafica con Matplotlib
 
         seno = WidgetPlot(self)
-        PlotCanvas()
+        #PlotCanvas()
         self.ui.verticalLayout_nyquist.addWidget(seno)
 
         coseno = WidgetPlot(self)

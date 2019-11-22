@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1126</width>
-    <height>576</height>
+    <width>1026</width>
+    <height>574</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -50,7 +50,7 @@
        </property>
        <widget class="QTabWidget" name="tabWidget_fiteo">
         <property name="currentIndex">
-         <number>2</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="tab_modelo">
          <property name="sizePolicy">
@@ -152,7 +152,7 @@
          <attribute name="title">
           <string>Ajuste</string>
          </attribute>
-         <widget class="QGroupBox" name="groupBox">
+         <widget class="QGroupBox" name="groupBox_metodo">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -191,7 +191,7 @@
            </property>
           </widget>
          </widget>
-         <widget class="QGroupBox" name="groupBox_2">
+         <widget class="QGroupBox" name="groupBox_ponderacion">
           <property name="geometry">
            <rect>
             <x>200</x>
@@ -203,7 +203,7 @@
           <property name="title">
            <string>Ponderación</string>
           </property>
-          <widget class="QRadioButton" name="radioButton_simplex_4">
+          <widget class="QRadioButton" name="radioButton_moduloZ">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -216,7 +216,7 @@
             <string>Módulo Z</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_simplex_2">
+          <widget class="QRadioButton" name="radioButton_unitario">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -229,7 +229,7 @@
             <string>Unitario</string>
            </property>
           </widget>
-          <widget class="QRadioButton" name="radioButton_simplex_3">
+          <widget class="QRadioButton" name="radioButton_proporcional">
            <property name="geometry">
             <rect>
              <x>10</x>
@@ -254,6 +254,83 @@
          <attribute name="title">
           <string>Simulación</string>
          </attribute>
+         <widget class="QGroupBox" name="groupBox_rangofrecuencias">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>10</y>
+            <width>261</width>
+            <height>111</height>
+           </rect>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Rango de frecuencias</string>
+          </property>
+          <widget class="QPlainTextEdit" name="plainTextEdit_freqinicial">
+           <property name="geometry">
+            <rect>
+             <x>81</x>
+             <y>31</y>
+             <width>79</width>
+             <height>26</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_freqfinal">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>71</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Final (Hz)</string>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="plainTextEdit_freqfinal">
+           <property name="geometry">
+            <rect>
+             <x>81</x>
+             <y>63</y>
+             <width>79</width>
+             <height>27</height>
+            </rect>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_freqinicial">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>35</y>
+             <width>64</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Inicial (Hz)</string>
+           </property>
+          </widget>
+         </widget>
         </widget>
        </widget>
        <widget class="QTableWidget" name="tableWidget"/>
@@ -292,7 +369,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1126</width>
+     <width>1026</width>
      <height>20</height>
     </rect>
    </property>
